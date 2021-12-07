@@ -1,0 +1,32 @@
+
+ 
+
+
+
+{% block content %}
+
+<div>Upload pdf file here</div>
+<form method="POST" enctype="multipart/form-data">
+    <input type="text" name="filename" placeholder="enter your file name">
+    <input type="file" multiple name="uploadfoles">
+    {% csrf_token %}
+    <button type="submit" name="button1">File Upload</button>
+</form>
+<div></div>
+<div></div>
+<div>Upload excel file here</div>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="file" name="myfile">
+    <button type="submit" name="button2">Upload</button>
+</form>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="file" name="myfile1">
+    <button type="submit" name="button3">Upload</button>
+</form>
+<form action = "/index" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <button type="submit" name="button3">Submit</button>
+</form>
+{% endblock %}

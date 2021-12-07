@@ -1,0 +1,15 @@
+
+ 
+{% block title %}Submit Request{% endblock %}
+
+
+{% block content %}
+<div>
+{{Hello_World}}
+</div>
+<form action="/upload" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <button type="submit" name="button3">Submit</button>
+</form>
+
+{% endblock %}
